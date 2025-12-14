@@ -15,8 +15,8 @@ A modern, performant Neovim config for C/C++, Shell, Python, Go, and Rust.
 ## Install
 
 ```bash
-git clone https://github.com/yujrchyang/neovimrc.git ~/.config/nvim
-cd ~/.config/nvim
+git clone git@github.com:yujrchyang/neovimrc.git $HOME/.config/nvim
+cd $HOME/.config/nvim
 ./install.sh
 nvim  # plugins auto-install
 ```

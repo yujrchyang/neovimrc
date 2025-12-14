@@ -29,34 +29,32 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 -- Ensure LSP servers are installed
 mason_lspconfig.setup({
   ensure_installed = {
-    "clangd",           -- C/C++
-    "bashls",           -- Shell
-    "pyright",          -- Python
-    "gopls",            -- Go
-    "rust_analyzer",    -- Rust
-  }
-})
+    "clangd",
+    "bashls",
+    "pyright",
+    "gopls",
+    "rust_analyzer",
+  },
 
--- Setup all LSPs
-mason_lspconfig.setup_handlers({
-  function(server_name)
-    lspconfig[server_name].setup({})
-  end,
+  handlers = {
+    function(server_name)
+      lspconfig[server_name].setup({})
+    end,
 
-  -- Custom settings for specific servers
-  ["pyright"] = function()
-    lspconfig.pyright.setup({
-      settings = {
-        python = {
-          analysis = { typeCheckingMode = "basic" }
+    pyright = function()
+      lspconfig.pyright.setup({
+        settings = {
+          python = {
+            analysis = { typeCheckingMode = "basic" }
+          }
         }
-      }
-    })
-  end,
+      })
+    end,
 
-  ["bashls"] = function()
-    lspconfig.bashls.setup({
-      filetypes = { "sh", "bash", "zsh" }
-    })
-  end,
+    bashls = function()
+      lspconfig.bashls.setup({
+        filetypes = { "sh", "bash", "zsh" }
+      })
+    end,
+  }
 })

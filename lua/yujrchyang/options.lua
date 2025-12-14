@@ -11,6 +11,7 @@ opt.backup = false
 opt.writebackup = false
 opt.updatetime = 300
 opt.timeoutlen = 300
+opt.cursorline = true
 
 -- Indentation
 opt.tabstop = 4

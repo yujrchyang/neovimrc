@@ -91,6 +91,29 @@ require("lazy").setup({
     end,
   },
 
+  -- Show files
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("yujrchyang.ui.nvim-tree")
+    end,
+  },
+
+  {
+    "akinsho/nvim-bufferline.lua",
+    version = "*",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("yujrchyang.ui.bufferline")
+    end,
+  },
+
   -- Statusline
   {
     "nvim-lualine/lualine.nvim",
