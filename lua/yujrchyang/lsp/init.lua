@@ -34,6 +34,9 @@ mason_lspconfig.setup({
     "pyright",
     "gopls",
     "rust_analyzer",
+    "cmake",
+    "dockerls",
+    "yamlls",
   },
 
   handlers = {
