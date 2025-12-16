@@ -14,11 +14,11 @@ opt.timeoutlen = 300
 opt.cursorline = true
 
 -- Indentation
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-opt.smartindent = true
+opt.tabstop = 8
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = false
+opt.smartindent = false
 
 -- Search
 opt.ignorecase = true
