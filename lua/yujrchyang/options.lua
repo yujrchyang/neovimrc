@@ -1,17 +1,37 @@
 local opt = vim.opt
+local g = vim.g
 
-opt.number = true
-opt.relativenumber = true
+-- Disable legacy providers
+g.loaded_perl_provider = 0
+g.loaded_python3_provider = 0
+g.loaded_ruby_provider = 0
+
+-- Basic
 opt.mouse = "a"
 opt.clipboard = "unnamedplus"
-opt.termguicolors = true
-opt.background = "dark"
 opt.swapfile = false
 opt.backup = false
 opt.writebackup = false
 opt.updatetime = 300
 opt.timeoutlen = 300
+
+-- Show
+opt.termguicolors = true
+opt.background = "dark"
+opt.number = true
+opt.relativenumber = true
 opt.cursorline = true
+opt.scrolloff = 10
+opt.sidescrolloff = 10
+opt.list = true
+opt.listchars = {
+  tab = '>-',
+  space = '.',
+  trail = '~',
+  nbsp = '_',
+  extends = '>',
+  precedes = '<'
+}
 
 -- Indentation
 opt.tabstop = 8
