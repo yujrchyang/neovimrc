@@ -128,6 +128,16 @@ require("lazy").setup({
     end,
   },
   { "nvim-tree/nvim-web-devicons", lazy = true },
+
+  -- Toggle
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    dependencies = nil,
+    config = function()
+      require("yujrchyang.ui.toggleterm")
+    end,
+  },
 }, {
   ui = { border = "rounded" },
   performance = {
