@@ -28,4 +28,11 @@ map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer"
 -- Bufferline
 map("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
 map("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
-map("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Close Buffer" })
+map('n', '<leader>bo', '<cmd>BufferLineCloseOthers<CR>', { desc = 'Close other buffers' })
+map('n', '<leader>br', '<cmd>BufferLineCloseRight<CR>', { desc = 'Close right buffers' })
+map('n', '<leader>bl', '<cmd>BufferLineCloseLeft<CR>', { desc = 'Close left buffers' })
+map('n', '<leader>bd', function()
+  local cur = vim.fn.bufnr()
+  vim.cmd('BufferLineCyclePrev')
+  vim.cmd('bdelete! ' .. cur)
+end, { desc = 'Close buffer' })

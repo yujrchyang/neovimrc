@@ -8,7 +8,7 @@ g.loaded_ruby_provider = 0
 
 -- Basic
 opt.mouse = "a"
-opt.clipboard = "unnamedplus"
+opt.clipboard = ""
 opt.swapfile = false
 opt.backup = false
 opt.writebackup = false
@@ -21,6 +21,7 @@ opt.background = "dark"
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
+opt.colorcolumn = '80'
 opt.scrolloff = 10
 opt.sidescrolloff = 10
 opt.list = true
