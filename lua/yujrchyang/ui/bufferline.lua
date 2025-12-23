@@ -8,6 +8,9 @@ require("bufferline").setup({
     -- Style: Use diagonal separators (slant/thin/default).
     separator_style = "thin",
 
+    -- Disable icon
+    show_buffer_icons = false,
+
     -- Should the close button (X) be displayed?
     show_close_icon = false,
     show_buffer_close_icons = false,

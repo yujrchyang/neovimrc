@@ -123,6 +123,9 @@ require("lazy").setup({
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
+    config = function()
+      require("yujrchyang.ui.lualine")
+    end,
   },
   { "nvim-tree/nvim-web-devicons", lazy = true },
 }, {

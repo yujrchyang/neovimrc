@@ -6,6 +6,10 @@ g.loaded_perl_provider = 0
 g.loaded_python3_provider = 0
 g.loaded_ruby_provider = 0
 
+-- file
+opt.encoding = "utf-8"
+opt.fileencoding = "utf-8"
+
 -- Basic
 opt.mouse = "a"
 opt.clipboard = ""
