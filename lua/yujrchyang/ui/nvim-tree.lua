@@ -1,32 +1,6 @@
 -- lua/yujrchyang/ui/nvim-tree.lua
 
 require("nvim-tree").setup({
-  -- Disable icon
-  renderer = {
-    icons = {
-      show = {
-        file = false,
-        folder = false,
-        folder_arrow = false,
-        git = false,
-        diagnostics = false,
-      },
-
-      glyphs = {
-        folder = {
-          arrow_closed = "+",
-          arrow_open = "-",
-          default = "+",
-          open = "-",
-          empty = " ",
-          empty_open = " ",
-          symlink = "s",
-          symlink_open = "s",
-        },
-      },
-    },
-  },
-
   -- Git statuses are now prefixed with text (e.g., [M] indicates modification).
   git = {
     enable = true,

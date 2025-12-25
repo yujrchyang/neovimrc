@@ -12,6 +12,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- Icon
+  {
+    "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("yujrchyang.ui.devicons")
+    end,
+  },
+
   -- Theme
   {
     "navarasu/onedark.nvim",
@@ -115,6 +123,15 @@ require("lazy").setup({
     },
     config = function()
       require("yujrchyang.ui.bufferline")
+    end,
+  },
+
+  -- Outline
+  {
+    "stevearc/aerial.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("yujrchyang.ui.aerial")
     end,
   },
 

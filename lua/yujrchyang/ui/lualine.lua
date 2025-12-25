@@ -5,7 +5,7 @@ require('lualine').setup({
     theme = 'onedark',
     section_separators = '',
     component_separators = '',
-    icons_enabled = false,
+    icons_enabled = true,
   },
   sections = {
     lualine_a = { 'mode' },
@@ -18,7 +18,14 @@ require('lualine').setup({
     },
     lualine_x = {
       'encoding',
-      'fileformat',
+      {
+        'fileformat',
+        symbols = {
+          unix = 'unix',
+          dos = 'dos',
+          mac = 'mac',
+        }
+      },
       'filetype',
     },
     lualine_y = { 'progress' },

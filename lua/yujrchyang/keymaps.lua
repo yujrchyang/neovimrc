@@ -25,6 +25,9 @@ map("i", "<C-Space>", function() require("cmp").complete() end, { desc = "Trigge
 -- NvimTree
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })
 
+-- Outline
+map('n', '<leader>a', '<Cmd>AerialToggle<CR>', { desc = 'Toggle outline' })
+
 -- Window navigation (directional)
 map("n", "<C-h>", "<C-w>h", { desc = "Window left" })
 map("n", "<C-j>", "<C-w>j", { desc = "Window down" })
@@ -42,3 +45,8 @@ map('n', '<leader>bd', function()
   vim.cmd('BufferLineCyclePrev')
   vim.cmd('bdelete! ' .. cur)
 end, { desc = 'Close buffer' })
+
+-- Toggle
+map("n", "<C-\\>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
+map("t", "<C-\\>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
+map("t", "<C-q>", "<C-\\><C-n>", { desc = "Exit terminal mode" })

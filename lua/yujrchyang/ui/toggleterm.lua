@@ -24,10 +24,3 @@ toggleterm.setup({
   -- Shadow intensity (0~10)
   shading_factor = 2,
 })
-
--- Keyboard shortcut: Used only for "Switch to general terminal"
-vim.keymap.set("n", "<C-\\>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
-vim.keymap.set("t", "<C-\\>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
-
--- Easily return to Neovim normal mode from terminal mode
-vim.keymap.set("t", "<C-q>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
