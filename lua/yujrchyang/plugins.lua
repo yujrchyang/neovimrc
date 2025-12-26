@@ -44,6 +44,18 @@ require("lazy").setup({
   { "williamboman/mason-lspconfig.nvim", dependencies = { "mason.nvim" } },
   { "mfussenegger/nvim-lint", event = "VeryLazy" },
 
+  -- Markdown
+  {
+    "ellisonleao/glow.nvim",
+    cmd = "Glow",
+    config = function()
+      require("glow").setup({
+        style = "dark",
+        border = "rounded",
+      })
+    end,
+  },
+
   -- Completion & Snippets
   {
     "hrsh7th/nvim-cmp",
@@ -84,7 +96,7 @@ require("lazy").setup({
     lazy = false,
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "c", "cpp", "python", "go", "rust", "bash", "json", "yaml", "toml" },
+        ensure_installed = { "c", "cpp", "python", "go", "rust", "bash", "json", "yaml", "toml", "markdown", "markdown_inline" },
         highlight = { enable = true },
         indent = { enable = true },
       })

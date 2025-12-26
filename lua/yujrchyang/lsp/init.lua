@@ -6,6 +6,7 @@ local lint = require("lint")
 lint.linters_by_ft = {
   sh = { "shellcheck" },
   python = { "ruff" },
+  markdown = { "markdownlint" },
 }
 
 -- Auto format on save (optional)
@@ -37,6 +38,7 @@ mason_lspconfig.setup({
     "cmake",
     "dockerls",
     "yamlls",
+    "marksman",
   },
 
   handlers = {
@@ -58,6 +60,10 @@ mason_lspconfig.setup({
       lspconfig.bashls.setup({
         filetypes = { "sh", "bash", "zsh" }
       })
+    end,
+
+    marksman = function()
+      lspconfig.marksman.setup({})
     end,
   }
 })
