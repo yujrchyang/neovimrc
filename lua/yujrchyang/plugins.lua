@@ -158,6 +158,15 @@ require("lazy").setup({
   },
   { "nvim-tree/nvim-web-devicons", lazy = true },
 
+  -- Git
+  {
+    "lewis6991/gitsigns.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("yujrchyang.ui.gitsigns")
+    end,
+  },
+
   -- Toggle
   {
     "akinsho/toggleterm.nvim",
