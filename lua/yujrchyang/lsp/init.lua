@@ -46,6 +46,23 @@ mason_lspconfig.setup({
       lspconfig[server_name].setup({})
     end,
 
+    clangd = function()
+      lspconfig.clangd.setup({
+        on_attach = on_attach,
+        cmd = {
+          "clangd",
+          "--background-index",
+          "--completion-style=bundled",
+          "--header-insertion=never",
+          "--enable-config",
+        },
+        root_dir = lspconfig.util.root_pattern(
+          "compile_commands.json",
+          ".git"
+        ),
+      })
+    end,
+
     pyright = function()
       lspconfig.pyright.setup({
         settings = {

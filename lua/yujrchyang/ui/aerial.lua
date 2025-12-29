@@ -1,11 +1,11 @@
 -- lua/yujrchyang/ui/aerial.lua
 
 require("aerial").setup({
-  opts = {
-    attach_mode = "global",
-    backends = { "lsp", "treesitter" },
-    layout = { min_width = 28, max_width = 40 },
-  },
+  attach_mode = "global",
+  backends = { "lsp" },
+  layout = { min_width = 28, max_width = 40 },
+  disable_max_lines = false,
+  disable_max_size  = false,
 
   -- optionally use on_attach to set keymaps when aerial has attached to a buffer
   on_attach = function(bufnr)
